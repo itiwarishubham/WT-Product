@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="product")
+@Table(name="products")
 public class Product {
 	
 	@Id
@@ -28,7 +28,7 @@ public class Product {
 	private String category;
 	
 	@Column
-	private int qoh;
+	private int quantity;
 	
 	
 	public Product() {
@@ -64,27 +64,27 @@ public class Product {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public int getQoh() {
-		return qoh;
+	public int getQuantity() {
+		return quantity;
 	}
-	public void setQoh(int qoh) {
-		this.qoh = qoh;
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
-	
-	public Product(Long prodId, String prodName, double price, String description, String category, int qoh) {
+	public Product(Long prodId, String prodName, double price, String description, String category, int quantity) {
 		super();
 		this.prodId = prodId;
 		this.prodName = prodName;
 		this.price = price;
 		this.description = description;
 		this.category = category;
-		this.qoh = qoh;
+		this.quantity = quantity;
 	}
 	@Override
 	public String toString() {
 		return "Product [prodId=" + prodId + ", prodName=" + prodName + ", price=" + price + ", description="
-				+ description + ", category=" + category + ", qoh=" + qoh + "]";
+				+ description + ", category=" + category + ", quantity=" + quantity + "]";
 	}
+	
 	
 	
 	
